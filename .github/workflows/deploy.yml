@@ -10,11 +10,8 @@ permissions:
 
 jobs:
   build_and_deploy:
-    strategy:
-      matrix:
-        version: ["20"]
-        os: ["ubuntu-latest"]
-    runs-on: ${{ matrix.os }}
+   
+    runs-on: ububtu-latest
 
     steps:
       - name: Checkout repository
@@ -23,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: $${{ matrix.version }}
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
