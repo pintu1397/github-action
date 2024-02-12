@@ -14,7 +14,8 @@ jobs:
   build_and_deploy:
       strategy:
         matrix:
-          os: [ubuntu-latest, windows-latest]
+          os: [windows-latest, ubuntu-latest]
+
       runs-on: ${{matrix.os}}
 
       steps:
